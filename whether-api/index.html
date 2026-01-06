@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Weather App</h1>
+
+      <form id="weatherForm" class="search">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Enter city name (e.g., Surat)"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="result" class="card hidden">
+        <div class="top">
+          <div>
+            <h2 id="cityName">—</h2>
+            <p id="desc" class="muted">—</p>
+          </div>
+          <img id="icon" alt="Weather icon" />
+        </div>
+
+        <div class="grid">
+          <div class="item">
+            <span class="label">Temperature</span>
+            <span id="temp" class="value">—</span>
+          </div>
+          <div class="item">
+            <span class="label">Feels like</span>
+            <span id="feels" class="value">—</span>
+          </div>
+          <div class="item">
+            <span class="label">Humidity</span>
+            <span id="humidity" class="value">—</span>
+          </div>
+          <div class="item">
+            <span class="label">Wind</span>
+            <span id="wind" class="value">—</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer muted">
+       © 2026 Copyright: Kush Patel. All rights reserved.
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- 
+b1b3c4ce7bf4ac00d3ba51b9ff276f09
+https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey} -->
